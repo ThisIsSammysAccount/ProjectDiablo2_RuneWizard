@@ -21,4 +21,4 @@ Thanks
 
 * Denis Fabrice for the original Diablo 2 RuneWizard. Original code [here](https://github.com/fabd/diablo2).
 * SenpaiSomething and the PD2 dev team for keeping a 20 year old game alive with a well built mod. [Project Diablo 2 website](https://www.projectdiablo2.com/).
-* The Amazon Basin community. The [technical discussions forum](http://www.theamazonbasin.com/d2/d2_guides.php) was instrumental to understand how to interpret the data found in the Diablo 2 files.
+* The Amazon Basin community. The [technical discussions forum](https://www.theamazonbasin.com/forums/index.php?/forums/forum/501-diablo-ii/) was instrumental to understand how to interpret the data found in the Diablo 2 files.
