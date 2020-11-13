@@ -166,7 +166,7 @@ var App =
 		
 		this.displayRunes();
 		
-		this.initHelp();
+		//this.initHelp();
 	},
 	
 	initHelp:function()
