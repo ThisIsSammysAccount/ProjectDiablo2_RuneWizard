@@ -11,7 +11,7 @@ COPYRIGHT NOTICE regarding the Diablo 2 DATA FILES
 
 Concerning: all *.txt files included in `/d2_113_data/`
 
-Please note that the data files extracted from the game [Diablo 2](http://eu.blizzard.com/en-gb/games/d2/) are included in this repository only for convenience and solely for the purpose of the creation of Diablo 2 game guides. They are updated with any changes made in the Project Diablo 2 mod.
+Please note that the data files extracted from the game [Diablo 2](https://us.shop.battle.net/en-us/family/diablo-ii) are included in this repository only for convenience and solely for the purpose of the creation of Diablo 2 game guides. They are updated with any changes made in the Project Diablo 2 mod.
 
 __These datafiles remain the intellectual property of _Blizzard Entertainment__.
 
