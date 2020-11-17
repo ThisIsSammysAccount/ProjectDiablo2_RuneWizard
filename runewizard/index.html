@@ -49,9 +49,9 @@
 					runes.<br />
 					<br />
 					<h3>Disclaimer</h3>
-					Project Diablo is an active mod so this information may be out of date. Refer to the <a target="_blank" href="https://projectdiablo2.miraheze.org/wiki/Main_Page">PD2 wiki</a> for all information and use at your own risk! You can report issues with the rune wizard <a target="_blank" href="https://github.com/ThisIsSammysAccount/ProjectDiablo2_RuneWizard/issues">here</a>.<br /><br />
+					Project Diablo is an active mod so this information may be out of date. Refer to the <a target="_blank" href="https://projectdiablo2.miraheze.org/wiki/Main_Page">PD2 wiki</a> for all information and use at your own risk! You can report issues with the rune wizard on <a target="_blank" href="https://github.com/ThisIsSammysAccount/ProjectDiablo2_RuneWizard/issues">github</a> or <a target="_blank" href="https://www.reddit.com/r/ProjectDiablo2/comments/jtlibw/rune_wizard_for_pd2/">reddit</a>.<br /><br />
 					<strong style="color: #844">Last updated: 11/15/2020</strong><br />
-					<!-- Last PD2 wiki update: 22:59, 14 November 2020‎ Napo  -->
+					<!-- Last PD2 wiki update: 15:50, 15 November 2020‎ Meisen13  -->
 					<br />
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 						<li><a href="#" id="Rune-Hel">Hel</a></li>
 						<li><a href="#" id="Rune-Io">Io</a></li>
 						<li><a href="#" id="Rune-Lum">Lum</a></li>
-						<li><a href="#" id="Rune-Ko" title="3 Ko + 1 Flawed Sapphire = 1 Fal">Ko</a></li>
+						<li><a href="#" id="Rune-Ko">Ko</a></li>
 						<li><a href="#" id="Rune-Fal">Fal</a></li>
 						<li><a href="#" id="Rune-Lem">Lem</a></li>
 						<li><a href="#" id="Rune-Pul">Pul</a></li>
@@ -103,6 +103,20 @@
 						<li><a href="#" id="Rune-Cham">Cham</a></li>
 						<li><a href="#" id="Rune-Zod">Zod</a></li>
 					</ul>
+				</div>
+				<div class="clear"></div>
+				<div id="exportUpload">
+					<h2>Rune Stash Import</h2>
+					
+					<div class="exportContent">
+						<ol>
+							<li>Export your PD2 character stash to a txt file by pressing Numpad 5 in game. You will see a message with the file name.</li>
+							<li>Find the file on your computer and open it in notepad. Copy/paste the entire contents of the .txt file into the box below.</li>
+							<li>The Rune Wizard will update all of the new runes that you have collected. It will not unmark runes, only add new, so you may want to Clear above first.</li>
+						</ol>
+						<textarea id="txtJSONExport" class="exportTextArea" placeholder="Paste your Stash Export Here"></textarea>
+						<div class="importResult"></div>						
+					</div>
 				</div>
 			</div>
 
@@ -885,10 +899,10 @@ with any character not a-z A-Z or 0-9 replaced by an underscore.
 		</div>
 
 		<div id="Fortitude" style="display:none">
-			<B>Weapons</B><br />
+			<B>Weapons</B><br />			
 			20% Chance To Cast Level 15 Chilling Armor when Struck<br />
 			+25% Faster Cast Rate<br />
-			+300% Enhanced Damage<br />
+			+200% Enhanced Damage<br />
 			+9 To Minimum Damage<br />
 			+50 To Attack Rating<br />
 			20% Deadly Strike<br />
@@ -1042,7 +1056,7 @@ with any character not a-z A-Z or 0-9 replaced by an underscore.
 		<div id="Phoenix" style="display:none">
 			<B>Weapons</B><br />
 			100% Chance To Cast level 40 Blaze When You Level-up<br />
-			10% Chance To Cast Level 22 Combustion On Striking<br />
+			10% Chance To Cast Level 22 Fireball On Striking<br />
 			Level 10-15 Redemption Aura When Equipped (varies)<br />
 			+300-350% Enhanced Damage (varies)<br />
 			Ignores Target's Defense<br />
@@ -1054,7 +1068,7 @@ with any character not a-z A-Z or 0-9 replaced by an underscore.
 			<br /><br />
 			<B>Shields</B><br />
 			100% Chance To Cast level 40 Blaze When You Level-up<br />
-			10% Chance To Cast Level 22 Combustion On Striking<br />
+			10% Chance To Cast Level 22 Fireball On Striking<br />
 			Level 10-15 Redemption Aura When Equipped (varies)<br />
 			+350-400 Defense Vs. Missile (varies)<br />
 			+300-350% Enhanced Damage (varies)<br />

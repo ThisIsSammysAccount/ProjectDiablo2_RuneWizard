@@ -258,6 +258,7 @@ var App =
 		}
 		
 		dom.addEvent(runesDiv, ['click'], this.runesEventHandler.bindAsEventListener(this));
+		dom.addEvent(dom.getElementsByClassName(document, "textarea", "exportTextArea")[0], ['blur'], this.runesEventHandler.bindAsEventListener(this));
 
 		// runeword description
 		var table = this.runewordsTable;
@@ -375,12 +376,8 @@ var App =
 			{
 				var rune_id =  RegExp.$1;
 				var state = !this.haveRunes[rune_id];
-				this.haveRunes[rune_id] = state;
-				this.updateRune(rune_id, state);
-				this.updateRunewords();
 				
-				// clear selection link
-				$('JsClearRunes').style.display = this.countRunes() ? '' : 'none';
+				this.saveRuneHelper(rune_id, state);
 				
 				// update cookie
 				this.saveRunes();
@@ -389,8 +386,47 @@ var App =
 			Event.stop(e);
 			return false;
 		}
+		else if (elem.nodeName.toLowerCase() === "textarea") //stash import textarea
+		{
+			var result = dom.getElementsByClassName(document, "div", "importResult")[0];
+			if (elem.value.length > 0)
+			{				
+				try {
+					var j = JSON.parse(elem.value);
+
+					//find all runes in the file (works for stacked and unstacked runes)
+					j.filter(x => x.type.match(/^ÿc8(.*)\sRune$/i)).forEach(runeMatch => {
+						//get the rune name and mark it if it exists
+						var rune_id = runeMatch.type.match(/^ÿc8(.*)\sRune$/i)[1];
+						this.saveRuneHelper(rune_id, 'have');
+					});
+
+					// update cookie
+					this.saveRunes();
+
+					elem.value = "";
+					result.innerHTML = "Import successful.";
+					result.style.color = "#4a4";					
+				} catch (e) {
+					result.innerHTML = "Invalid JSON. Make sure to copy/paste the entire contents of the file.";
+					result.style.color = "#844";
+				}
+			}
+			else
+				result.innerHTML = "";
+		}
 
 		return true;
+	},
+
+	saveRuneHelper:function(rune_id, state) 
+	{
+		this.haveRunes[rune_id] = state;
+		this.updateRune(rune_id, state);
+		this.updateRunewords();
+		
+		// clear selection link
+		$('JsClearRunes').style.display = this.countRunes() ? '' : 'none';
 	},
 	
 	helpEventHandler:function(e)
