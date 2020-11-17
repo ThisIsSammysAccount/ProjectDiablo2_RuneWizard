@@ -443,3 +443,17 @@ a img {
     right: 0;
     top: 19px;
 }
+
+#exportUpload {
+	padding-top: 20px;
+    padding-right: 80px;    
+}
+
+.exportContent {
+	color: #888;
+}
+
+.exportContent textarea {
+	height: 200px;
+	width: 100%;
+}
