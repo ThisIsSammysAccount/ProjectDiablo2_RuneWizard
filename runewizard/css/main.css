@@ -416,6 +416,10 @@ a img {
 	font-variant: small-caps;
 }
 
+#JsLayer .level {
+	color: #ccc;
+	line-height: 1.8;
+}
 
 /* Diablo 2 style font! ^_^ */
 
