@@ -395,9 +395,9 @@ var App =
 					var j = JSON.parse(elem.value);
 
 					//find all runes in the file (works for stacked and unstacked runes)
-					j.filter(x => x.type.match(/^ÿc8(.*)\sRune$/i)).forEach(runeMatch => {
+					j.filter(x => x.type.match(/(.*)\sRune$/i)).forEach(runeMatch => {
 						//get the rune name and mark it if it exists
-						var rune_id = runeMatch.type.match(/^ÿc8(.*)\sRune$/i)[1];
+						var rune_id = runeMatch.type.match(/(.*)\sRune$/i)[1];
 						this.saveRuneHelper(rune_id, 'have');
 					});
 
